@@ -1,0 +1,94 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next -p 7777",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.2.2",
+    "@apollo/react-hooks": "^4.0.0",
+    "@charliewilco/gluejar": "^1.0.0",
+    "apollo-boost": "^0.4.9",
+    "babel-plugin-styled-components": "^1.12.0",
+    "copy-to-clipboard": "^3.3.1",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "next": "9.5.4",
+    "next-with-apollo": "^5.1.0",
+    "react": "16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-dom": "16.13.1",
+    "react-numeric-input": "^2.2.3",
+    "react-resizable": "^1.11.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.8",
+    "@storybook/addon-actions": "^6.1.4",
+    "@storybook/addon-essentials": "^6.1.4",
+    "@storybook/addon-links": "^6.1.4",
+    "@storybook/react": "^6.1.4",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.1",
+    "jest": "^26.6.3"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

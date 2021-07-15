@@ -1,0 +1,12 @@
+*.min.js
+node_modules/
+public
+docs
+dist
+static
+.next
+.cache
+templates
+tmp
+cli*.js
+packages/storybook
